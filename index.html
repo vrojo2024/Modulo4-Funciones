@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!--Defino que el documento está escrito en HTML5.-->
+<html lang="es"><!--Inicia el documento HTML y define que el idioma de la página es Español-->
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" /><!--Este es el ícono para la página que se va a ver en la pestaña del navegador.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link rel="stylesheet" href="/src/style.css"><!--Vinculo el archivo de estilos CSS.-->
+    <title>Clínica</title><!--Título de la página que aparece en la pestaña del navegador.-->
   </head>
   <body>
-    <div id="app">
-      <h1>TypeScript Sandbox</h1>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
+      <div id="container"><!--Contenedor principal que incluye elementos-->
+        <div id="display-turno" class="turno">00</div><!--Muestro el número de turno actual, comenzando en 00-->
+        <p class="texto-turno">Por favor, acérquese al mostrador</p><!--Agrego mensaje al paciente para que se acerque al mostrado-->
+        <div class="contenedor-botones"> <!--Contenedor que incluye los 3 botones botones "Anterior, Limpiar y Siguiente"-->
+          <button class="estiloboton" id="boton-anterior">Anterior</button> <!--Boton para retroceder al turno anterior-->
+          <button class="estiloboton" id="boton-reseteo">Limpiar</button><!--Botón para reestablecer el contador a 00-->
+          <button class="estiloboton" id="boton-siguiente">Siguiente</button><!--Botón para pasar al siguiente turno-->
+        </div>
+        <div id="contenedor-turnomanual"><!--Contenedor para ingresar número manualmente-->
+          <input id="entrada-manual" type="number"></input><!--Campo de entrada para indicar el número de turno manualmente-->
+          <button class="estiloturnomanual" id="turno-manual" >Llamar Turno Ingresado</button><!--Botón para hacer visible el número que se ingresó manualmente-->
+      </div>
+    <script type="module" src="/src/main.ts"></script><!--Vincula el archivo JavaScript/TypeScript-->
   </body>
 </html>
