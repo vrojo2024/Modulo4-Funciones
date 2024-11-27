@@ -4,7 +4,7 @@
 
 Puedes utilizar como punto de partida la sandbox de JS o la sandbox de TS (te recomendamos al de TS) y subir el resultado a tu repositorio de GitHub.
 
-Enunciado
+# Enunciado
 Queremos implementar una pantalla en la que aparezca un display con el turno actual de una clínica y un botón para pasar al siguiente turno y otro para volver al anterior.
 
 A implementar:
@@ -21,7 +21,7 @@ Pista: Puedes usar la función padStart, la cual nos ayuda a añadir ceros o cua
 
 Si lo implementas en TypeScript en modo estricto, mejor que mejor.
 
-Material
+# Material
 Un ejemplo de marcador de turnos:
 
 <!DOCTYPE html>
@@ -71,5 +71,5 @@ Y el estilo
 }
 Deja el resto del CSS de styles.css como está (en root se añade una fuente que hace que quede bien)
 
-A tener en cuenta
+# A tener en cuenta
 Asegúrate de que tienes enlazado el fichero de CSS en tu HTML con LINK (si no puede que no te aparezcan los estilos).
