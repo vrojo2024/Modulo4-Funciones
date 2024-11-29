@@ -11,7 +11,7 @@ let turno: number = 0; //Declaro una variable turno que almacena el número de t
 function llamaTurno (turno: number) {//Actualizo el número de turno mostrado en la página. 
  
     const turnoDisplay = document.getElementById("display-turno");//creo constante y obtengo el elemento del html por id display-turno
-    if (turnoDisplay instanceof HTMLDivElement && turnoDisplay !== null && turnoDisplay !== undefined) //Esta linea comprueba si la variable turnoDisplay existe en la páginay es un HTMLHeadingElement y no es null ni undefined
+    if (turnoDisplay instanceof HTMLDivElement && turnoDisplay !== null && turnoDisplay !== undefined) //Esta linea comprueba si la variable turnoDisplay existe en la páginay es un HTMLDivElement y no es null ni undefined
       {turnoDisplay.innerHTML //  Asigna un nuevo contenido HTML al elemento turnoDisplay, y actualiza en este caso el contenido para que muestre el turno actual
         = turno.toString() //Convierte el valor de la variable turno (que es un número) en una cadena de texto
         .padStart(2,'0');//, hago que tenga al menos 2 dígitos
@@ -36,7 +36,7 @@ function siguiente () {
 function numeroManual (manTurno: string) { //Establece un turno manual que es el que ingresó el usuario, de tipo string
     const turnoNumerico = Number(manTurno);//Convierte el valor ingresado a un número.
     turno = turnoNumerico > 0 ? turnoNumerico : 0; //Me aseguro que este valor sea mayor que 0 ó 0 y nunca sea negativo
-    if (turnoManual instanceof HTMLButtonElement && turnoManual !==null && turnoManual !==undefined) //Si el elemento turnoManual existe en la páginay es un HTMLHeadingElement y no es null ni undefined,
+    if (turnoManual instanceof HTMLButtonElement && turnoManual !==null && turnoManual !==undefined) //Si el elemento turnoManual existe en la páginay es un HTMLButtonElement y no es null ni undefined,
       {turnoManual.addEventListener("click", () => llamaTurno(turno));//agrego un "event listener" para escuchar el evento "click", Cuando el usuario haga click en el botón se ejecutará la función llamaTurno.
     }
 }
